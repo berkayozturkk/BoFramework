@@ -9,7 +9,6 @@ namespace BoFramework.Core.DataAcces.NHibernate
 {
     public class NhQueryableRepository<T>:IQueryableRepository<T> where T : class,IEntity,new()
     {
-
         private NHibernateHelper _nHibernateHelper;
         private IQueryable<T> _entities;
 
