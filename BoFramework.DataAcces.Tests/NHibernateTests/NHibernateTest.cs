@@ -32,8 +32,15 @@ namespace BoFramework.DataAcces.Tests.NHibernateTests
 
             var result = categoryDal.GetList();
             Assert.AreEqual(8, result.Count);
+        }
 
+        [TestMethod]
+        public void Get_all_returns_all_productDetails()
+        {
+            NhProductDal productDal = new NhProductDal(new SqlServerHelper());
 
+            var result = productDal.GetProductDetails();
+            Assert.AreEqual(77, result.Count);
         }
     }
 }

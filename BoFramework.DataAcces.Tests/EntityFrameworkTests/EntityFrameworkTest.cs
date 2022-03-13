@@ -32,5 +32,14 @@ namespace BoFramework.DataAcces.Tests.EntityFrameworkTests
             var result = categoryDal.GetList();
             Assert.AreEqual(8, result.Count);
         }
+
+        [TestMethod]
+        public void Get_all_returns_all_productDetails()
+        {
+            EfProductDal productDal = new EfProductDal();
+
+            var result = productDal.GetProductDetails();
+            Assert.AreEqual(77, result.Count);
+        }
     }
 }
