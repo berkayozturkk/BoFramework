@@ -1,4 +1,5 @@
 ﻿using BoFramework.Core.DataAcces;
+using BoFramework.Northwind.Entities.ComplexTypes;
 using BoFramework.Northwind.Entities.Concrate;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,6 @@ namespace BoFramework.Northwind.DataAccess.Abstract
 {
     public interface IProductDal: IEntityRepository<Product>
     {
-
+        List<ProductDetail> GetProductDetails();
     }
 }

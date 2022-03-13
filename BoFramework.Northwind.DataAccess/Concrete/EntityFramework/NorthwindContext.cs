@@ -1,4 +1,5 @@
-﻿using BoFramework.Northwind.Entities.Concrate;
+﻿using BoFramework.Northwind.DataAccess.Concrete.EntityFramework.Mappings;
+using BoFramework.Northwind.Entities.Concrate;
 using System.Data.Entity;
 
 namespace BoFramework.Northwind.DataAccess.Concrete.EntityFramework
@@ -12,6 +13,7 @@ namespace BoFramework.Northwind.DataAccess.Concrete.EntityFramework
         }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
